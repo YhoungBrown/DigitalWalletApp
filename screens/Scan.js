@@ -143,7 +143,7 @@ const Scan = ({navigation}) => {
         borderTopRightRadius: SIZES.radius,
         backgroundColor: COLORS.white,
       }}>
-          <Text style={{...FONTS.h4}}>
+          <Text style={{fontSize: 20, fontWeight: '500'}}>
             Another Payment Method
           </Text>
           <View
@@ -174,7 +174,7 @@ const Scan = ({navigation}) => {
                     />
                 </View>
                 <Text style={{
-                  marginLeft: SIZES.padding, ...FONTS.body4
+                  marginLeft: SIZES.padding,
                 }}>Phone Number</Text>
             </TouchableOpacity>
 
@@ -203,7 +203,7 @@ const Scan = ({navigation}) => {
                     />
                 </View>
                 <Text style={{
-                  marginLeft: SIZES.padding, ...FONTS.body4
+                  marginLeft: SIZES.padding,
                 }}>Barcode</Text>
             </TouchableOpacity>
           </View>
