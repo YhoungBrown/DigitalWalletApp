@@ -3,7 +3,8 @@ import { Camera } from 'expo-camera';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
-import { COLORS } from '../constants';
+import { COLORS, SIZES } from '../constants';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const Scan = () => {
   const [type, setType] = useState(Camera.Constants.Type.back);
@@ -72,19 +73,24 @@ const Scan = () => {
           <View
             style={{
               position: 'absolute',
-              top: 20,
+              top: 50,
               right: 20,
             }}
           >
             <TouchableOpacity
               style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "center",
                 backgroundColor: COLORS.white,
                 padding: 10,
                 borderRadius: 5,
               }}
               onPress={toggleCameraType}
             >
-              <Text style={{ color: COLORS.black }}>Flip Camera</Text>
+                {/**Flip Camera icon below */}
+              <MaterialCommunityIcons name="camera-flip" size={24} color= {COLORS.primary} />
+              <Text style={{ color: COLORS.black, paddingLeft: 2, }}>Flip</Text>
             </TouchableOpacity>
           </View>
         </Camera>
