@@ -231,9 +231,6 @@ const Scan = ({navigation}) => {
           }}
           type={type}
           onBarCodeScanned={onBarCodeRead}
-          barCodeScannerSettings={{
-            barCodeTypes: [BarCodeScanner.Constants.BarCodeType.qr],
-          }}
         >
           <View
             style={{
